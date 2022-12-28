@@ -1,0 +1,1 @@
+![Diagrama Entidade-Relacionamento](./img/01excalidraw.png)
