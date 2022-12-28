@@ -1,24 +1,24 @@
-'use strict';
-
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  up: async (queryInterface, _Sequelize) => {
+    await queryInterface.bulkInsert('cnpjs',
+      [{
+        id: 1,
+        cnpj: '00000000000001',
+        companyType: '2',
+        createdAt: '2020-10-29 21:20:33',
+        updatedAt: '2020-10-29 21:20:33',
+      },
+      {
+        id: 2,
+        cnpj: '00000000000002',
+        companyType: '1',
+        createdAt: '2020-10-29 21:20:33',
+        updatedAt: '2020-10-29 21:20:33',
+      },
+      ], { timestamps: false });
   },
 
-  down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
+  down: async (queryInterface, _Sequelize) => {
+    await queryInterface.bulkDelete('cnpjs', null, {});
+  },
 };
