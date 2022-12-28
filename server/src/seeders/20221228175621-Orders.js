@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
-    await queryInterface.bulkInsert('cnpjs',
+    await queryInterface.bulkInsert('orders',
       [{
         id: 1,
         orderNfId: '1605181324132',
@@ -82,6 +82,6 @@ module.exports = {
   },
 
   down: async (queryInterface, _Sequelize) => {
-    await queryInterface.bulkDelete('cnpjs', null, {});
+    await queryInterface.bulkDelete('orders', null, {});
   },
 };
