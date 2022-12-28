@@ -1,1 +1,1 @@
-![Diagrama Entidade-Relacionamento](./img/01excalidraw.png)
+![Diagrama Entidade-Relacionamento](./img/er_diagram_cashforce.png)
