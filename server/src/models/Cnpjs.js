@@ -11,9 +11,19 @@ const Cnpjs = (sequelize, DataTypes) => {
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
     },
-    { underscored: true, timestamps: false, tableName: 'cnpjs'}
+    { timestamps: false, tableName: 'cnpjs'}
     )
 
+    definition.associate = (models) => {
+        definition.hasMany(models.Buyers, { foreignKey: 'cnpjId', as: 'buyers' })
+    };
+    definition.associate = (models) => {
+        definition.hasMany(models.Sponsors, { foreignKey: 'cnpjId', as: 'sponsors' })
+    };
+    definition.associate = (models) => {
+        definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: 'orders' })
+    };
+    
     return definition;
 }
 
