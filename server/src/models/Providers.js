@@ -1,4 +1,4 @@
-const Cnpjs = (sequelize, DataTypes) => {
+const Providers = (sequelize, DataTypes) => {
     const definition = sequelize.define('Providers', {
         id: {
             type: DataTypes.INTEGER,
@@ -40,12 +40,12 @@ const Cnpjs = (sequelize, DataTypes) => {
     definition.associate = (models) => {
         definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
     };
-    definition.associate = (models) => {
-        definition.hasManhy(models.Orders, { foreignKey: 'cnpjId', as: 'cnpjs' })
-    };
+    // definition.associate = (models) => {
+    //     definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: 'cnpjs' })
+    // };
    
     
     return definition;
 }
 
-module.exports = Cnpjs;
+module.exports = Providers;
