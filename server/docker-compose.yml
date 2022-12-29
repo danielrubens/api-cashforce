@@ -9,7 +9,7 @@ services:
     # Define um user específico, diferente de root para a execução dos comandos
     # user: eval
     # Nome do container para facilitar execução
-    container_name: blogs_api
+    container_name: cashforce
     # Mesmo que `docker run -t`
     tty: true
     # Mesmo que `docker run -i`
@@ -44,11 +44,11 @@ services:
       API_PORT: 3000
       NODE_ENV: 'development'
     networks:
-      - blogs_api_net
+      - cashforce_net
 
   # Serviço que irá rodar o banco de dados
   db:
-    container_name: blogs_api_db
+    container_name: cashforce_db
     image: mysql:8.0.23
     # Indica de forma fixa a plataforma na qual o banco irá rodar
     platform: linux/x86_64
@@ -61,12 +61,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:
-      - blogs_api_net
+      - cashforce_net
 
 # Lista de redes que os containeres irão utilizar
 networks:
-  # Cria rede com nome `blogs_api_net`
-  blogs_api_net:
+  # Cria rede com nome `cashforce_net`
+  cashforce_net:
     # Define o `driver` como `bridge`, que é o driver padrão do docker
     driver: bridge
 
