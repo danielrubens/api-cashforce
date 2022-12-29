@@ -15,7 +15,10 @@ module.exports = {
       mobile: Sequelize.STRING,
       departament: Sequelize.STRING,
       verificationCode: Sequelize.STRING,
-      emailChecked: Sequelize.INTEGER
+      emailChecked: Sequelize.INTEGER,
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE,
+      cashforceAdm: Sequelize.INTEGER
     })
   },
 
