@@ -20,7 +20,7 @@ const Orders = (sequelize, DataTypes) => {
           createdAt: DataTypes.DATE,
           updatedAt: DataTypes.DATE,
           cnpjId: DataTypes.INTEGER,
-        //   userId: DataTypes.INTEGER,
+          userId: DataTypes.INTEGER,
           buyerId: DataTypes.INTEGER,
           providerId: DataTypes.INTEGER,
           orderStatusBuyer: DataTypes.STRING,
