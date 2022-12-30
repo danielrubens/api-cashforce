@@ -38,10 +38,9 @@ const Buyers = (sequelize, DataTypes) => {
     { timestamps: false, tableName: 'buyers'}
     )
 
-    // definition.associate = (models) => {
-    //     definition.belongsTo(models.Providers, { foreignKey: 'providerId', as: 'providers' })
-    //     definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
-    // };
+    definition.associate = (models) => {
+        definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
+    };
     definition.associate = (models) => {
         definition.hasMany(models.Orders, { foreignKey: 'buyerId', as: 'buyers' })
     };
