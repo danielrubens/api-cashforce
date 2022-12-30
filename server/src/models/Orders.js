@@ -20,7 +20,7 @@ const Orders = (sequelize, DataTypes) => {
           createdAt: DataTypes.DATE,
           updatedAt: DataTypes.DATE,
           cnpjId: DataTypes.INTEGER,
-          userId: DataTypes.INTEGER,
+        //   userId: DataTypes.INTEGER,
           buyerId: DataTypes.INTEGER,
           providerId: DataTypes.INTEGER,
           orderStatusBuyer: DataTypes.STRING,
@@ -32,11 +32,12 @@ const Orders = (sequelize, DataTypes) => {
     { timestamps: false, tableName: 'orders'}
     )
 
-    definition.associate = (models) => {
-        definition.belongsTo(models.Providers, { foreignKey: 'providerId', as: 'providers' })
-        definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
-        definition.belongsTo(models.Buyers, { foreignKey: 'buyerId', as: 'buyers' })
-    };
+    // definition.associate = (models) => {
+    //     definition.belongsTo(models.Providers, { foreignKey: 'providerId', as: 'providers' })
+    //     definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
+    //     definition.belongsTo(models.Buyers, { foreignKey: 'buyerId', as: 'buyers' })
+    //     // definition.belongsTo(models.Users, { foreignKey: 'userId', as: 'users' })
+    // };
     // definition.associate = (models) => {
     //     definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: 'cnpjs' })
     // };

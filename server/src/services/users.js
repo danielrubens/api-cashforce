@@ -1,8 +1,5 @@
 const {Users} = require('../models')
 
-const getAll = async () => {
-    const users = await Users.findAll()
-    return users
-}
+const getAll = async () => Users.findAll()
 
 module.exports = { getAll }

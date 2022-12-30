@@ -23,7 +23,7 @@ const Users = (sequelize, DataTypes) => {
     //     definition.hasMany(models.Buyers, { foreignKey: 'cnpjId', as: 'cnpjs' })
     // };
     // definition.associate = (models) => {
-    //     definition.hasMany(models.Orders, { foreignKey: 'providerId', as: 'orders' })
+    //     definition.hasMany(models.Orders, { foreignKey: 'userId', as: 'users' })
     // };
     definition.associate = (models) => {
         definition.hasMany(models.Buyers, { foreignKey: 'userId', as: 'users' })

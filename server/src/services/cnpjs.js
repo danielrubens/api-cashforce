@@ -1,8 +1,5 @@
 const {Cnpjs} = require('../models')
 
-const getAll = async () => {
-    const cnpjs = await Cnpjs.findAll()
-    return cnpjs
-}
+const getAll = async () => Cnpjs.findAll()
 
 module.exports = { getAll }

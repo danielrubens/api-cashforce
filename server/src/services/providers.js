@@ -1,8 +1,5 @@
 const {Providers} = require('../models')
 
-const getAll = async () => {
-    const cnpjs = await Providers.findAll()
-    return cnpjs
-}
+const getAll = async () =>  Providers.findAll()
 
 module.exports = { getAll }
