@@ -19,16 +19,9 @@ const Users = (sequelize, DataTypes) => {
         },
     { timestamps: false, tableName: 'users'}
     )
-    // definition.associate = (models) => {
-    //     definition.hasMany(models.Buyers, { foreignKey: 'cnpjId', as: 'cnpjs' })
-    // };
-    // definition.associate = (models) => {
-    //     definition.hasMany(models.Orders, { foreignKey: 'userId', as: 'users' })
-    // };
-    // definition.associate = (models) => {
-    //     definition.hasMany(models.Buyers, { foreignKey: 'userId', as: 'users' })
-    // };
-
+    definition.associate = (models) => {
+        definition.hasMany(models.Orders, { foreignKey: 'userId', as: 'users' })
+    };
     return definition;
 }
 
