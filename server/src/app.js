@@ -9,6 +9,7 @@ app.get('/providers', controller.providers.getAll)
 app.get('/users', controller.users.getAll)
 app.get('/buyers', controller.buyers.getAll)
 app.get('/orders', controller.orders.getAll)
+app.get('/table', controller.table.getAll)
 
 
 module.exports = app;
