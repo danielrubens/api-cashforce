@@ -9,9 +9,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      nDup: Sequelize.STRING,
-      dVenc: Sequelize.STRING,
-      vDup: Sequelize.STRING,
+      nDup: Sequelize.STRING(255),
+      dVenc: Sequelize.STRING(255),
+      vDup: Sequelize.STRING(255),
       availableToMarket: Sequelize.INTEGER,
     })
   },

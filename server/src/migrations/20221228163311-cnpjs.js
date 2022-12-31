@@ -9,8 +9,8 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      cnpj: Sequelize.STRING,
-      companyType: Sequelize.STRING,
+      cnpj: Sequelize.STRING(255),
+      companyType: Sequelize.STRING(255),
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,
     })
