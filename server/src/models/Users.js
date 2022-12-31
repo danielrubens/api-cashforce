@@ -20,7 +20,7 @@ const Users = (sequelize, DataTypes) => {
     { timestamps: false, tableName: 'users'}
     )
     definition.associate = (models) => {
-        definition.hasMany(models.Orders, { foreignKey: 'userId', as: 'users' })
+        definition.hasMany(models.Orders, { foreignKey: 'userId', as: 'user' })
     };
     return definition;
 }

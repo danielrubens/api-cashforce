@@ -31,11 +31,16 @@ const Orders = (sequelize, DataTypes) => {
         },
     { timestamps: false, tableName: 'orders'}
     )
-
+    
     definition.associate = (models) => {
-        definition.belongsTo(models.Users, { foreignKey: 'userId', as: 'users' })
-        definition.belongsTo(models.Buyers, { foreignKey: 'buyerId', as: 'buyers' })
+        definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: '_cnpjId' })
+        definition.belongsTo(models.Users, { foreignKey: 'userId', as: 'user' })
     };
+    // definition.associate = (models) => {
+    //     definition.belongsTo(models.Users, { foreignKey: 'userId', as: 'users' })
+    //     definition.belongsTo(models.Buyers, { foreignKey: 'buyerId', as: 'buyers' })
+    //     definition.belongsTo(models.Providers, { foreignKey: 'cnpjId', as: 'providers' })
+    // };
     
     return definition;
 }

@@ -40,9 +40,9 @@ const Providers = (sequelize, DataTypes) => {
     definition.associate = (models) => {
         definition.belongsTo(models.Cnpjs, { foreignKey: 'cnpjId', as: 'cnpjs' })
     };
-    // definition.associate = (models) => {
-    //     definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: 'cnpjs' })
-    // };
+    definition.associate = (models) => {
+        definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: 'cnpjs' })
+    };
    
     
     return definition;

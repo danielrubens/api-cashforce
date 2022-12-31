@@ -1,14 +1,8 @@
-const { Op } = require('sequelize');
-const snakeize = require('snakeize');
-const { Providers, Orders } = require('../models');
+const {Orders, Cnpjs, Users} = require('../models')
 
 const interflow = { include: [
-  { model: Providers, as: 'providers' },
-  { model: Orders, as: 'orders' }] };
+  { model: Cnpjs, as: '_cnpjId' }, {model: Users, as: 'user'}] };
 
-const getAll = async () => {
-    const posts = await Orders.findAll(interflow);
-    return posts;
-};
+const getAll = async () => Orders.findAll(interflow)
 
 module.exports = { getAll }

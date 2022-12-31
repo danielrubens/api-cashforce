@@ -13,14 +13,17 @@ const Cnpjs = (sequelize, DataTypes) => {
     },
     { timestamps: false, tableName: 'cnpjs'}
     )
+    // definition.associate = (models) => {
+    //     definition.hasMany(models.Buyers, { foreignKey: 'cnpjId', as: '_cnpjId' })
+    // };
     definition.associate = (models) => {
-        definition.hasMany(models.Buyers, { foreignKey: 'cnpjId', as: 'cnpjs' })
+        definition.hasMany(models.Orders, { foreignKey: 'cnpjId', as: '_cnpjId' })
     };
   
-    definition.associate = (models) => {
-        definition.hasMany(models.Providers, { foreignKey: 'cnpjId', as: 'cnpjs' })
+    // definition.associate = (models) => {
+    //     definition.hasMany(models.Providers, { foreignKey: 'cnpjId', as: 'cnpjs' })
         
-    };
+    // };
 
 
     return definition;
