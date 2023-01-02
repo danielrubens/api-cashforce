@@ -1,7 +1,9 @@
 const express = require('express');
 const controller = require('./controllers')
+const cors = require('cors')
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
 app.get('/', controller.table.getAll)
