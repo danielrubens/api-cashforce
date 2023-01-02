@@ -19,14 +19,14 @@
           <th>DADOS DO CEDENTE</th>
         </tr>
       </thead>
-      <tbody v-for="user in User" v-bind:key="user.id">
+      <tbody v-for="invoice in Invoices" v-bind:key="invoice.id">
         <tr>
-          <td> {{ user.orderNfId }}</td>
-          <td>{{ user.buyer.name }}</td>
-          <td>{{user.provider.name  }}</td>
-          <td>{{user.emissionDate.slice(0,10)  }}</td>
-          <td>{{user.value  }}</td>
-          <td>{{user.orderStatusBuyer  }}</td>
+          <td>{{invoice.orderNfId }}</td>
+          <td>{{invoice.buyer.name }}</td>
+          <td>{{invoice.provider.name  }}</td>
+          <td>{{invoice.emissionDate.slice(0,10)  }}</td>
+          <td>{{invoice.value  }}</td>
+          <td>{{invoice.orderStatusBuyer  }}</td>
         </tr>
       </tbody>
     </table>
@@ -41,14 +41,14 @@ export default {
   name: 'hello',
   data () {
     return {
-      User: {}
+      Invoices: {}
     }
   },
   mounted () {
     axios.get('http://localhost:3000/')
       .then((response) => {
         console.log(response.data)
-        this.User = response.data
+        this.Invoices = response.data
       })
       .catch((error) => {
         console.log(error)
