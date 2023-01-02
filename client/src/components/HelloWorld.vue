@@ -1,6 +1,12 @@
 <template>
     <div class="hello">
   <div align="center">
+
+    <div v-for="post in posts" v-bind:key="post.id">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+
     <table class="table">
       <thead>
         <tr>
@@ -9,11 +15,11 @@
           <th>Age______</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody v-for="user in User" v-bind:key="user.id">
         <tr>
-          <td> {{ User[0].orderNfId }}</td>
-          <td>{{ User[1].orderNfId  }}</td>
-          <td>{{ User[2].orderNfId  }}</td>
+          <td> {{ user.orderNfId }}</td>
+          <td>{{ user.orderNfId }}</td>
+          <td>{{user.orderNfId  }}</td>
         </tr>
       </tbody>
     </table>
