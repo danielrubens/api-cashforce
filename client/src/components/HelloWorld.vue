@@ -10,16 +10,23 @@
     <table class="table">
       <thead>
         <tr>
-          <th>First Name______</th>
-          <th>Last Name______</th>
-          <th>Age______</th>
+          <th>NOTA FISCAL</th>
+          <th>SACADO</th>
+          <th>CEDENTE</th>
+          <th>EMISSÃO</th>
+          <th>VALOR</th>
+          <th>STATUS</th>
+          <th>DADOS DO CEDENTE</th>
         </tr>
       </thead>
       <tbody v-for="user in User" v-bind:key="user.id">
         <tr>
           <td> {{ user.orderNfId }}</td>
-          <td>{{ user.orderNfId }}</td>
-          <td>{{user.orderNfId  }}</td>
+          <td>{{ user.buyer.name }}</td>
+          <td>{{user.provider.name  }}</td>
+          <td>{{user.emissionDate.slice(0,10)  }}</td>
+          <td>{{user.value  }}</td>
+          <td>{{user.orderStatusBuyer  }}</td>
         </tr>
       </tbody>
     </table>
