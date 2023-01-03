@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-  <div align="center">
+    <div align="center">
 
     <div v-for="post in posts" v-bind:key="post.id">
       <h2>{{ post.title }}</h2>
