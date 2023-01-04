@@ -25,7 +25,7 @@
           <th>EMISSÃO</th>
           <th>VALOR</th>
           <th>STATUS</th>
-          <th>DADOS DO CEDENTE</th>
+          <th></th>
         </tr>
       </thead>
       <tbody v-for="invoice in Invoices" v-bind:key="invoice.id">
@@ -36,6 +36,12 @@
           <td>{{invoice.emissionDate.slice(0,10)  }}</td>
           <td>{{invoice.value  }}</td>
           <td>{{invoice.orderStatusBuyer  }}</td>
+          <td>
+          <div class="dados-cedente">
+               Dados do cedente
+            </div>
+          </td>
+
         </tr>
       </tbody>
     </table>
@@ -68,6 +74,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.dados-cedente {
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 165px;
+        height: 32px;
+        border: 1px solid #CAD3FF;
+        background-color:transparent;
+        box-sizing: border-box;
+        border-radius: 16px;
+        cursor:pointer;
+        transition:200ms;
+        text-transform: none;
+        font-size: 12px;
+        line-height: 16px;
+        color: #727D94;
+        font-weight: bold;
+    }
 
   tr{
         border: 1px solid #DFE2EB;
