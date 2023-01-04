@@ -10,10 +10,10 @@
             <div class="content-title">
                 <img class="invoice-img-svg" src="../assets/invoice_2.svg" alt="invoice_2.svg">
                 <div class="invoice-label">Notas fiscais</div>
-            </div>
-            <div class="content-subtitle">
-                Visualize as notas fiscais que você tem.
-            </div>
+              </div>
+              <div class="content-subtitle">
+                  Visualize as notas fiscais que você tem.
+              </div>
         </div>
 
     <table class="table">
@@ -68,6 +68,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+  tr{
+        border: 1px solid #DFE2EB;
+        border-radius: 20px;
+        padding: 7px 30px;
+    }
+
+    td{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color:#4D5566;
+        text-transform: uppercase;
+        padding: 7px 30px;
+    }
 
 .header{
   display:flex;
