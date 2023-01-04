@@ -20,4 +20,6 @@ npm install
 npm start
 ```
 
+## Diagrama Entidade-Relacionamento
+
 ![Diagrama Entidade-Relacionamento](./img/er_diagram_cashforce.png)
