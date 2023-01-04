@@ -35,7 +35,8 @@
           <td>{{invoice.provider.name  }}</td>
           <td>{{invoice.emissionDate.slice(0,10)  }}</td>
           <td>{{invoice.value  }}</td>
-          <td>{{invoice.orderStatusBuyer  }}</td>
+          <td>{{['Pendente de confirmação', 'Pedido confirmado', 'Não reconhece o pedido', 'Mercadoria não recebida', 'Recebida com avaria', 'Devolvida', 'Recebida com devolução parcial', 'Recebida e confirmada', 'Pagamento Autorizado']
+[Number(invoice.orderStatusBuyer)] }}</td>
           <td>
           <div class="dados-cedente">
                Dados do cedente
@@ -52,6 +53,7 @@
 
 <script>
 import axios from 'axios'
+
 export default {
   name: 'hello',
   data () {
@@ -59,6 +61,10 @@ export default {
       Invoices: {}
     }
   },
+  // orderStatus: function (index) {
+  //   const array = ['Pendente de confirmação', 'Pedido confirmado', 'Não reconhece o pedido', 'Mercadoria não recebida', 'Recebida com avaria', 'Devolvida', 'Recebida com devolução parcial', 'Recebida e confirmada', 'Pagamento Autorizado']
+  //   return array[Number(index)]
+  // },
   mounted () {
     axios.get('http://localhost:3000/')
       .then((response) => {
