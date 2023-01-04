@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Logo></Logo>
+    <div class="frame">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import Logo from './components/Logo'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Logo
+  }
 }
 </script>
 
