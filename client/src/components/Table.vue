@@ -1,11 +1,6 @@
 <template>
     <div class="hello">
     <div align="center">
-
-    <div v-for="post in posts" v-bind:key="post.id">
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.body }}</p>
-    </div>
     <div class="header">
             <div class="content-title">
                 <img class="invoice-img-svg" src="../assets/invoice_2.svg" alt="invoice_2.svg">
@@ -14,7 +9,7 @@
               <div class="content-subtitle">
                   Visualize as notas fiscais que você tem.
               </div>
-        </div>
+    </div>
 
     <table class="table">
       <thead>
@@ -55,7 +50,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'hello',
+  name: 'Table',
   data () {
     return {
       Invoices: {}
@@ -80,6 +75,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+tr{
+      border: 1px solid #DFE2EB;
+      border-radius: 20px;
+      padding: 7px 30px;
+  }
+
 .value{
   color: #00AD8C;
   font-family: 'DM Sans';
@@ -109,12 +110,6 @@ export default {
         line-height: 16px;
         color: #727D94;
         font-weight: bold;
-    }
-
-  tr{
-        border: 1px solid #DFE2EB;
-        border-radius: 20px;
-        padding: 7px 30px;
     }
 
     td{
