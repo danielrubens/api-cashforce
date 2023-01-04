@@ -6,6 +6,15 @@
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
     </div>
+    <div class="header">
+            <div class="content-title">
+                <img class="invoice-img-svg" src="../assets/invoice_2.svg" alt="invoice_2.svg">
+                <div class="invoice-label">Notas fiscais</div>
+            </div>
+            <div class="content-subtitle">
+                Visualize as notas fiscais que você tem.
+            </div>
+        </div>
 
     <table class="table">
       <thead>
@@ -59,18 +68,55 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+
+.header{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:19px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.content-title{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-bottom:5px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.invoice-img-svg{
+  width: 24px;
 }
-a {
-  color: #42b983;
+
+.invoice-label{
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 9px;
+  color:#021B51;
 }
+
+.content-subtitle{
+  color:#727D94;
+  font-size: 14px;
+}
+
+table {
+  padding:0;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+th{
+  padding: 3px 30px
+}
+
+thead {
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #A1A8B8;
+  padding: 19px 30px 30px 0;
+}
+
 </style>
