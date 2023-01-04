@@ -33,8 +33,8 @@
           <td>{{invoice.orderNfId }}</td>
           <td>{{invoice.buyer.name }}</td>
           <td>{{invoice.provider.name  }}</td>
-          <td>{{invoice.emissionDate.slice(0,10)  }}</td>
-          <td>{{invoice.value  }}</td>
+          <td>{{invoice.emissionDate.slice(0,10).replaceAll('-', '/')  }}</td>
+          <td>R$ {{invoice.value.slice(0, invoice.value.length - 2)  }},{{invoice.value.slice(invoice.value.length-2)}}</td>
           <td>{{['Pendente de confirmação', 'Pedido confirmado', 'Não reconhece o pedido', 'Mercadoria não recebida', 'Recebida com avaria', 'Devolvida', 'Recebida com devolução parcial', 'Recebida e confirmada', 'Pagamento Autorizado']
 [Number(invoice.orderStatusBuyer)] }}</td>
           <td>
